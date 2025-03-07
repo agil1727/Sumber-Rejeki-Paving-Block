@@ -1325,106 +1325,133 @@ body {
 /*--------------------------------------------------------------
 # Projet Details Section
 --------------------------------------------------------------*/
-.project-details .portfolio-details-slider img {
-  width: 100%;
+/* Styling utama */
+.project-details {
+  font-family: 'Times New Roman', serif;
+  color: #333;
 }
 
+/* Gambar dalam slider */
+.project-details .portfolio-details-slider img {
+  width: 700px; /* Sesuaikan dengan gambar kedua */
+  height: auto; /* Agar proporsi tetap terjaga */
+  object-fit: cover; /* Menyesuaikan gambar tanpa merusak rasio */
+  display: block;
+  margin: 0 auto; /* Agar gambar tetap rata tengah */
+}
+
+
+/* Bullet pagination */
 .project-details .portfolio-details-slider .swiper-pagination .swiper-pagination-bullet {
-  width: 12px;
-  height: 12px;
-  background-color: rgba(255, 255, 255, 0.7);
+  width: 14px;
+  height: 14px;
+  background-color: rgba(255, 255, 255, 0.9);
   opacity: 1;
+  transition: all 0.3s ease-in-out;
 }
 
 .project-details .portfolio-details-slider .swiper-pagination .swiper-pagination-bullet-active {
   background-color: var(--color-primary);
+  transform: scale(1.2);
 }
 
+/* Tombol navigasi slider */
 .project-details .swiper-button-prev,
 .project-details .swiper-button-next {
-  width: 48px;
-  height: 48px;
+  width: 50px;
+  height: 50px;
+  transition: 0.3s;
 }
 
 .project-details .swiper-button-prev:after,
 .project-details .swiper-button-next:after {
-  color: rgba(255, 255, 255, 0.8);
-  background-color: rgba(0, 0, 0, 0.2);
-  font-size: 24px;
+  color: #fff;
+  background-color: rgba(0, 0, 0, 0.3);
+  font-size: 26px;
   border-radius: 50%;
-  width: 48px;
-  height: 48px;
+  width: 50px;
+  height: 50px;
   display: flex;
   align-items: center;
   justify-content: center;
-  transition: 0.3s;
+  transition: 0.3s ease-in-out;
 }
 
 .project-details .swiper-button-prev:hover:after,
 .project-details .swiper-button-next:hover:after {
-  background-color: rgba(0, 0, 0, 0.6);
+  background-color: rgba(0, 0, 0, 0.8);
+  transform: scale(1.1);
 }
 
+/* Responsif: Sembunyikan tombol navigasi di layar kecil */
 @media (max-width: 575px) {
-
   .project-details .swiper-button-prev,
   .project-details .swiper-button-next {
     display: none;
   }
 }
 
+/* Informasi proyek */
 .project-details .portfolio-info h3 {
-  font-size: 22px;
+  font-size: 24px;
   font-weight: 700;
   margin-bottom: 20px;
   padding-bottom: 20px;
   position: relative;
+  text-transform: uppercase;
 }
 
 .project-details .portfolio-info h3:after {
   content: "";
   position: absolute;
   display: block;
-  width: 50px;
-  height: 3px;
+  width: 60px;
+  height: 4px;
   background: var(--color-primary);
   left: 0;
   bottom: 0;
+  border-radius: 2px;
 }
 
 .project-details .portfolio-info ul {
   list-style: none;
   padding: 0;
-  font-size: 15px;
+  font-size: 16px;
 }
 
 .project-details .portfolio-info ul li {
   display: flex;
-  flex-direction: column;
-  padding-bottom: 15px;
+  align-items: center;
+  gap: 10px;
+  padding-bottom: 12px;
+  transition: 0.3s ease-in-out;
 }
 
-.project-details .portfolio-info ul strong {
-  text-transform: uppercase;
-  font-weight: 400;
-  color: #838893;
-  font-size: 14px;
+.project-details .portfolio-info ul li:hover {
+  color: var(--color-primary);
+  transform: translateX(5px);
 }
 
+/* Tombol kunjungi proyek */
 .project-details .portfolio-info .btn-visit {
-  padding: 8px 40px;
+  padding: 10px 45px;
   background: var(--color-primary);
   color: #fff;
-  border-radius: 50px;
+  border-radius: 30px;
+  font-weight: bold;
+  display: inline-block;
   transition: 0.3s;
+  text-transform: uppercase;
 }
 
 .project-details .portfolio-info .btn-visit:hover {
   background: #ffc019;
+  transform: scale(1.05);
 }
 
+/* Deskripsi proyek */
 .project-details .portfolio-description h2 {
-  font-size: 26px;
+  font-size: 28px;
   font-weight: 700;
   margin-bottom: 20px;
   color: var(--color-secondary);
@@ -1432,33 +1459,38 @@ body {
 
 .project-details .portfolio-description p {
   padding: 0;
+  line-height: 1.6;
+  font-size: 1.1rem;
+  color: #555;
 }
 
+/* Testimoni */
 .project-details .portfolio-description .testimonial-item {
-  padding: 30px 30px 0 30px;
+  padding: 30px;
   position: relative;
-  background: #f5f6f7;
+  background: #f9f9f9;
   height: 100%;
   margin-bottom: 50px;
+  border-radius: 10px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
 }
 
 .project-details .portfolio-description .testimonial-item .testimonial-img {
   width: 90px;
-  border-radius: 50px;
-  border: 6px solid #fff;
+  border-radius: 50%;
+  border: 5px solid #fff;
   float: left;
-  margin: 0 10px 0 0;
+  margin: 0 15px 0 0;
 }
 
 .project-details .portfolio-description .testimonial-item h3 {
-  font-size: 18px;
+  font-size: 20px;
   font-weight: bold;
-  margin: 15px 0 5px 0;
-  padding-top: 20px;
+  margin: 20px 0 5px 0;
 }
 
 .project-details .portfolio-description .testimonial-item h4 {
-  font-size: 14px;
+  font-size: 15px;
   color: #6c757d;
   margin: 0;
 }
@@ -1470,26 +1502,12 @@ body {
   line-height: 0;
 }
 
-.project-details .portfolio-description .testimonial-item .quote-icon-left {
-  display: inline-block;
-  left: -5px;
-  position: relative;
-}
-
-.project-details .portfolio-description .testimonial-item .quote-icon-right {
-  display: inline-block;
-  right: -5px;
-  position: relative;
-  top: 10px;
-  transform: scale(-1, -1);
-}
-
 .project-details .portfolio-description .testimonial-item p {
   font-style: italic;
-  margin: 0 0 15px 0 0 0;
+  margin: 10px 0;
   padding: 0;
+  color: #444;
 }
-
 
 /*--------------------------------------------------------------
 # Service Details Section
@@ -1560,18 +1578,22 @@ body {
 --------------------------------------------------------------*/
 
 .contact {
-  padding-top: 60px; /* Memberikan ruang lebih di bagian atas */
+  padding-top: 60px; /* Ruang lebih di bagian atas */
 }
 
+/* Informasi kontak */
 .contact .info-item {
-  box-shadow: 0 0 25px rgba(0, 0, 0, 0.08);
-  padding: 20px 0 30px 0;
-  margin-bottom: 30px; /* Jarak antar elemen */ 
-  transition: transform 0.3s ease-in-out; /* Menambahkan animasi saat hover */
+  background: #fff;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  margin-bottom: 30px; /* Jarak antar elemen */
+  border-radius: 8px;
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
 }
 
 .contact .info-item:hover {
-  transform: translateY(-5px); /* Efek angkat sedikit saat hover */
+  transform: translateY(-5px);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
 }
 
 .contact .info-item i {
@@ -1581,135 +1603,99 @@ body {
   width: 56px;
   height: 56px;
   font-size: 24px;
-  line-height: 0;
-  color: var(--color-primary);
+  color: #ffae00;
   border-radius: 50%;
   border: 2px dotted #ffd565;
-  transition: background-color 0.3s ease-in-out; /* Menambahkan animasi pada background icon saat hover */
+  transition: 0.3s;
 }
-
-.col-lg-6 iframe {
-  margin-top: 30px; /* Menambahkan jarak atas untuk memindahkan iframe lebih ke bawah */
-}
-
 
 .contact .info-item i:hover {
-  background-color: rgba(254, 185, 0, 0.1); /* Mengubah warna latar belakang saat hover */
+  background-color: rgba(254, 185, 0, 0.15);
 }
 
 .contact .info-item h3 {
   font-size: 20px;
-  color: #6c757d;
+  color: #333;
   font-weight: 700;
   margin: 10px 0;
-  transition: color 0.3s ease; /* Menambahkan animasi warna teks */
+  transition: color 0.3s;
 }
 
 .contact .info-item p {
-  padding: 0;
-  line-height: 24px;
   font-size: 14px;
+  color: #555;
   margin-bottom: 0;
+  line-height: 24px;
 }
 
-.contact .php-email-form {
+/* Container utama untuk Maps dan Form */
+.contact-container {
+  display: flex;
+  align-items: stretch;
+  gap: 20px; /* Jarak antara Maps dan Form */
+}
+
+.contact-container > div {
+  flex: 1; /* Membuat kedua kolom memiliki lebar yang sama */
+}
+
+/* Google Maps */
+.contact-map iframe {
   width: 100%;
-  background: #fff;
-  box-shadow: 0 0 25px rgba(0, 0, 0, 0.08);
-  padding: 30px;
-  margin-top: 30px; /* Menambahkan jarak antara form dan elemen di atasnya */
-  transition: transform 0.3s ease-in-out; /* Menambahkan animasi pada form */
+  height: 100%;
+  min-height: 400px; /* Tinggi minimum */
+  border-radius: 10px;
 }
 
-.contact .php-email-form:hover {
-  transform: translateY(-5px); /* Efek angkat sedikit pada form saat hover */
+/* Form Kontak */
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  background-color: #f9f9f9;
+  min-height: 400px;
 }
 
-.contact .php-email-form .form-group {
-  padding-bottom: 20px;
-  margin-bottom: 20px; /* Menambahkan jarak bawah pada setiap form group */
+.contact-form .form-control {
+  margin-bottom: 10px;
+  padding: 10px;
+  font-size: 16px;
 }
 
-.contact .php-email-form .error-message {
-  display: none;
-  color: #fff;
-  background: #df1529;
-  text-align: left;
-  padding: 15px;
-  font-weight: 600;
+.contact-form textarea {
+  resize: none;
 }
 
-.contact .php-email-form .sent-message {
-  display: none;
-  color: #fff;
-  background: #059652;
-  text-align: center;
-  padding: 15px;
-  font-weight: 600;
-}
-
-.contact .php-email-form .loading {
-  display: none;
-  background: #fff;
-  text-align: center;
-  padding: 15px;
-}
-
-.contact .php-email-form .loading:before {
-  content: "";
-  display: inline-block;
-  border-radius: 50%;
-  width: 24px;
-  height: 24px;
-  margin: 0 10px -6px 0;
-  border: 3px solid #059652;
-  border-top-color: #fff;
-  animation: animate-loading 1s linear infinite;
-}
-
-.contact .php-email-form input,
-.contact .php-email-form textarea {
-  border-radius: 0;
-  box-shadow: none;
-  font-size: 14px;
-}
-
-.contact .php-email-form input:focus,
-.contact .php-email-form textarea:focus {
-  border-color: var(--color-primary);
-}
-
-.contact .php-email-form input {
-  height: 44px;
-}
-
-.contact .php-email-form textarea {
-  padding: 10px 12px;
-}
-
-.contact .php-email-form button[type=submit] {
-  background: var(--color-primary);
-  border: 0;
-  padding: 10px 35px;
-  color: #fff;
-  transition: 0.4s;
+.contact-form button {
+  padding: 10px;
+  font-size: 16px;
+  background-color: #8D6E63; /* Warna coklat tanah */
+  color: white;
+  border: none;
   border-radius: 5px;
-  margin-top: 20px; /* Menambahkan jarak atas pada tombol submit */
+  cursor: pointer;
+  transition: 0.3s;
 }
 
-.contact .php-email-form button[type=submit]:hover {
-  background: rgba(254, 185, 0, 0.8);
+.contact-form button:hover {
+  background-color: #a87214;
 }
 
-@keyframes animate-loading {
-  0% {
-    transform: rotate(0deg);
+/* Responsif: Agar tetap rapi di layar kecil */
+@media (max-width: 768px) {
+  .contact-container {
+    flex-direction: column;
   }
-
-  100% {
-    transform: rotate(360deg);
+  
+  .contact-map iframe,
+  .contact-form {
+    min-height: 300px;
   }
 }
+
 
 /*--------------------------------------------------------------
 # Recent Blog Posts Section
@@ -2870,3 +2856,8 @@ h2 {
 .whatsapp-button:hover {
   transform: scale(1.1);
 }
+
+
+/*--------------------------------------------------------------
+# sucsess
+--------------------------------------------------------------*/

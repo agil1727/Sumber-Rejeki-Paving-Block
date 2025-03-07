@@ -216,3 +216,24 @@ document.getElementById("contact-form").addEventListener("submit", function(even
       event.preventDefault(); // Mencegah form dikirim jika ada error
   }
 });
+
+document.addEventListener("DOMContentLoaded", function() {
+    let komentarCount = localStorage.getItem("komentarCount") || 0;
+    document.getElementById("komentar-count").textContent = komentarCount;
+
+    document.querySelector(".btn-kirim").addEventListener("click", function(event) {
+        event.preventDefault();
+        
+        let nama = document.querySelector("input[name='name']").value;
+        let komentar = document.querySelector("textarea[name='comment']").value;
+        
+        if (nama && komentar) {
+            komentarCount++;
+            localStorage.setItem("komentarCount", komentarCount);
+            document.getElementById("komentar-count").textContent = komentarCount;
+            
+            alert("Komentar berhasil dikirim!");
+        }
+    });
+});
+

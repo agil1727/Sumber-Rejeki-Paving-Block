@@ -1660,14 +1660,11 @@ body {
 
 .info-container {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
-  gap: 40px;
   margin-top: 30px;
   text-align: center;
-  border: 1px solid #ccc;
-  padding: 10px;
-  border-radius: 8px;
+  gap: 20px;
 }
 
 .info-item {
@@ -1675,6 +1672,8 @@ body {
   border-radius: 8px;
   background: #fff;
   transition: transform 0.3s ease-in-out;
+  border: 1px solid #ccc;
+  width: 250px;
 }
 
 .info-item:hover {
@@ -1698,7 +1697,6 @@ body {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
-
 
 /* Responsif untuk layar kecil */
 @media (max-width: 768px) {

@@ -1668,7 +1668,7 @@ body {
 
 .info-wrapper {
   display: flex;
-  gap: 20px;
+  gap: 15px;
   justify-content: space-between;
   width: 100%;
   max-width: 900px;
@@ -1676,12 +1676,13 @@ body {
 
 .info-item {
   flex: 1;
-  padding: 15px;
+  padding: 10px;
   border-radius: 8px;
   background: #fff;
   transition: transform 0.3s ease-in-out;
   border: 1px solid #ccc;
   text-align: center;
+  max-width: 200px;
 }
 
 .info-item:hover {
@@ -1690,7 +1691,7 @@ body {
 
 .info-item h3 {
   color: black;
-  font-size: 18px;
+  font-size: 16px;
   margin-bottom: 5px;
 }
 
@@ -1719,8 +1720,10 @@ body {
     flex-direction: column;
     align-items: center;
   }
+  .info-item {
+    max-width: 100%;
+  }
 }
-
 /*--------------------------------------------------------------
 # Blog
 --------------------------------------------------------------*/

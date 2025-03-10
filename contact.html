@@ -126,14 +126,20 @@
                       allowfullscreen="" loading="lazy"></iframe>
               </div>
           
-              <div class="contact-form">
-                <form>
-                  <input type="text" class="form-control" placeholder="Nama Anda" required>
-                  <input type="email" class="form-control" placeholder="Email Anda" required>
-                  <textarea class="form-control" rows="5" placeholder="Pesan Anda" required></textarea>
-                  <button type="submit" class="btn btn-primary w-100 mt-2">Kirim</button>
-              </form>
-              </div>
+              <form id="contactForm">
+                <input type="text" class="form-control" placeholder="Nama Anda" required>
+                <input type="email" class="form-control" placeholder="Email Anda" required>
+                <textarea class="form-control" rows="5" placeholder="Pesan Anda" required></textarea>
+                <button type="submit" class="btn btn-primary w-100 mt-2">Kirim</button>
+            </form>
+            
+            <script>
+            document.getElementById("contactForm").addEventListener("submit", function(event) {
+                event.preventDefault(); // Mencegah reload halaman
+                window.location.href = "success.html"; // Redirect ke success.html
+            );
+            </script>
+            
           </div>
           
               </div>

@@ -1694,9 +1694,11 @@ body {
 
 .highlight {
   background: linear-gradient(45deg, #FF5733, #FF8D1A);
+  background-clip: text; /* Tambahkan properti standar */
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
+
 
 /* Responsif untuk layar kecil */
 @media (max-width: 768px) {

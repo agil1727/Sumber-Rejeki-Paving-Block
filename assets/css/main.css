@@ -1638,20 +1638,37 @@ body {
 
 .contact-map {
   flex: 1;
-  min-width: 45%;
+  min-width: 50%;
 }
 
 .contact-map iframe {
   width: 100%;
-  height: 300px;
+  height: 350px; /* Tinggi lebih besar agar proporsional */
   border-radius: 8px;
   border: none;
 }
 
 .contact-form {
   flex: 1;
-  min-width: 45%;
+  min-width: 50%;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  background-color: #fff;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
 
+/* Responsif untuk layar kecil */
+@media (max-width: 768px) {
+  .contact-container {
+    flex-direction: column;
+  }
+
+  .contact-map,
+  .contact-form {
+    min-width: 100%;
+  }
+}
 
 /*--------------------------------------------------------------
 # Blog
@@ -2279,7 +2296,7 @@ body {
 # Footer
 --------------------------------------------------------------*/
 .footer {
-  color: #fff;
+  color: #555151f5;
   background: #b6aeae; /* Warna hitam solid */
   font-size: 14px;
   padding-top: 100px !important;

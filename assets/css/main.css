@@ -1577,30 +1577,96 @@ body {
 # Contact Section
 --------------------------------------------------------------*/
 
+.contact {
+  padding-top: 60px;
+}
+
+.contact .info-item {
+  background: #fff;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  margin-bottom: 30px;
+  border-radius: 8px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.contact .info-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+}
+
+.contact .info-item i {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 56px;
+  height: 56px;
+  font-size: 24px;
+  color: #ffae00;
+  border-radius: 50%;
+  border: 2px dotted #ffd565;
+  transition: 0.3s;
+}
+
+.contact .info-item i:hover {
+  background-color: rgba(254, 185, 0, 0.15);
+}
+
+.contact .info-item h3 {
+  font-size: 20px;
+  color: #333;
+  font-weight: 700;
+  margin: 10px 0;
+}
+
+.contact .info-item p {
+  font-size: 14px;
+  color: #555;
+  margin-bottom: 0;
+  line-height: 24px;
+}
+
+.contact-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.contact-container > div {
+  flex: 1;
+  min-width: 300px;
+}
+
+.contact-map iframe {
+  width: 100%;
+  height: 400px;
+  border-radius: 10px;
+}
+
 .contact-form {
   display: flex;
   flex-direction: column;
   padding: 20px;
-  background: #f9f9f9;
   border: 1px solid #ddd;
   border-radius: 10px;
+  background-color: #f9f9f9;
 }
 
-.contact-form input,
-.contact-form textarea {
-  width: 100%;
-  padding: 10px;
+.contact-form .form-control {
   margin-bottom: 10px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
+  padding: 10px;
   font-size: 16px;
+}
+
+.contact-form textarea {
+  resize: none;
 }
 
 .contact-form button {
-  background-color: #8D6E63;
-  color: white;
   padding: 10px;
   font-size: 16px;
+  background-color: #8D6E63;
+  color: white;
   border: none;
   border-radius: 5px;
   cursor: pointer;
@@ -1609,6 +1675,17 @@ body {
 
 .contact-form button:hover {
   background-color: #a87214;
+}
+
+@media (max-width: 768px) {
+  .contact-container {
+    flex-direction: column;
+  }
+
+  .contact-map iframe,
+  .contact-form {
+    min-height: 300px;
+  }
 }
 
 

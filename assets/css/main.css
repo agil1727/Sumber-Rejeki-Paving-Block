@@ -1629,32 +1629,29 @@ body {
 
 .contact-container {
   display: flex;
-  flex-wrap: wrap;
-  gap: 30px; /* Memberi jarak lebih luas */
+  flex-wrap: nowrap; /* Mencegah elemen turun ke bawah */
+  gap: 20px;
   max-width: 900px;
   margin: auto;
   align-items: center;
-  justify-content: center;
-  padding-bottom: 20px;
+  justify-content: space-between; /* Menjaga posisi kanan-kiri */
 }
 
 .contact-map {
-  width: 50%;
-  max-width: 450px;
-  min-width: 280px;
+  flex: 1;
+  min-width: 45%;
 }
 
 .contact-map iframe {
   width: 100%;
-  height: 350px; /* Tinggi lebih besar agar proporsional */
+  height: 350px; /* Menyesuaikan tinggi agar proporsional */
   border-radius: 8px;
   border: none;
 }
 
 .contact-form {
-  width: 50%;
-  max-width: 450px;
-  min-width: 280px;
+  flex: 1;
+  min-width: 45%;
   padding: 20px;
   border: 1px solid #ddd;
   border-radius: 8px;
@@ -1665,15 +1662,12 @@ body {
 /* Responsif untuk layar kecil */
 @media (max-width: 768px) {
   .contact-container {
-    flex-direction: column;
-    align-items: center;
+    flex-direction: column; /* Kembali ke atas-bawah jika layar kecil */
   }
 
   .contact-map,
   .contact-form {
-    width: 100%;
-    max-width: 100%;
-    text-align: center;
+    min-width: 100%;
   }
 }
 

@@ -134,10 +134,17 @@
             </form>
             
             <script>
-            document.getElementById("contactForm").addEventListener("submit", function(event) {
-                event.preventDefault(); // Mencegah reload halaman
-                window.location.href = "success.html"; // Redirect ke success.html
-            });
+        document.getElementById("contactForm").addEventListener("submit", function(event) {
+    event.preventDefault(); // Mencegah reload halaman
+
+    // Cek apakah form valid
+    if (this.checkValidity()) {
+        window.location.href = "success.html"; // Redirect ke success.html
+    } else {
+        this.reportValidity(); // Menampilkan error form bawaan browser
+    }
+});
+
             </script>
             
           </div>

@@ -1627,7 +1627,7 @@ body {
 # Contact Section
 --------------------------------------------------------------*/
 
-..contact-container {
+.contact-container {
   display: flex;
   flex-wrap: wrap;
   gap: 30px; /* Memberi jarak lebih luas */

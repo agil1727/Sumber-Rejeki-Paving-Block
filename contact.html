@@ -132,21 +132,7 @@
                 <textarea class="form-control" rows="5" placeholder="Pesan Anda" required></textarea>
                 <button type="submit" class="btn btn-primary w-100 mt-2">Kirim</button>
             </form>
-            
-            <script>
-        document.getElementById("contactForm").addEventListener("submit", function(event) {
-    event.preventDefault(); // Mencegah reload halaman
-
-    // Cek apakah form valid
-    if (this.checkValidity()) {
-        window.location.href = "success.html"; // Redirect ke success.html
-    } else {
-        this.reportValidity(); // Menampilkan error form bawaan browser
-    }
-});
-
-            </script>
-            
+                    
           </div>
           
               </div>

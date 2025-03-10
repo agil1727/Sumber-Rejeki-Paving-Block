@@ -1660,11 +1660,14 @@ body {
 
 .info-container {
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
   gap: 40px;
   margin-top: 30px;
   text-align: center;
+  border: 1px solid #ccc;
+  padding: 10px;
+  border-radius: 8px;
 }
 
 .info-item {
@@ -1691,11 +1694,9 @@ body {
 
 .highlight {
   background: linear-gradient(45deg, #FF5733, #FF8D1A);
-  background-clip: text; /* Tambahkan properti standar */
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
-
 
 /* Responsif untuk layar kecil */
 @media (max-width: 768px) {

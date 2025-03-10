@@ -256,11 +256,12 @@ p {
 /* Mengatur posisi header menjadi sticky */
 /* Header Styling */
 /* ====== Header Styling ====== */
+/* ====== Header Styling ====== */
 .header {
   width: 100%;
   position: fixed;
   top: 0;
-  z-index: 9999999;
+  z-index: 9999;
   background-color: white;
   transition: background-color 0.3s ease-in-out, padding 0.3s ease-in-out;
   box-shadow: none;
@@ -270,22 +271,20 @@ p {
 .header .container {
   display: flex;
   align-items: center;
-  justify-content: flex-start;  /* Geser isi container ke kiri */
+  justify-content: flex-start;
   max-width: 1200px;
   margin: auto;
-  padding: 0 0 0 0; /* Hapus padding jika ada */
+  padding: 0;
 }
-
 
 /* ====== Logo Styling ====== */
 .header .logo {
-  margin-left: 0px;  /* Geser logo lebih ke kiri */
+  margin-left: 0;
 }
 
 .header .logo img {
   max-height: 50px;
 }
-
 
 /* ====== Navbar Styling ====== */
 .navbar ul {
@@ -294,9 +293,8 @@ p {
   gap: 20px;
   margin: 0;
   padding: 0;
-  justify-content: flex-end; /* Menjadikan menu navbar ke kanan */
+  justify-content: flex-end;
 }
-
 
 .navbar ul li a {
   text-decoration: none;
@@ -314,10 +312,27 @@ p {
   color: #fff;
 }
 
-/* ====== Hamburger Icon ====== */
-/* ====== Tombol Hamburger (Tersembunyi di Desktop) ====== */
+/* ====== Hero Section Styling ====== */
+.hero {
+  background-image: url('assets/img/hero-carousel/1.jpeg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: white;
+  padding-top: 80px; /* Supaya tidak ketutupan navbar */
+}
+
+/* ====== Hamburger Icon (Mobile) ====== */
 .mobile-nav-toggle {
-  display: none; /* Sembunyikan di layar besar */
+  display: none;
   font-size: 32px;
   cursor: pointer;
   color: #000000;
@@ -328,12 +343,11 @@ p {
   right: 20px;
   transform: translateY(-50%);
   z-index: 1001;
-  padding: 10px; /* Area klik lebih besar */
+  padding: 10px;
 }
 
-/* ====== Navbar Responsive (Tengah) ====== */
+/* ====== Navbar Responsive (Mobile) ====== */
 @media (max-width: 768px) {
-  /* Tampilkan hamburger di tampilan HP */
   .mobile-nav-toggle {
     display: block;
   }
@@ -345,16 +359,16 @@ p {
     top: 60px;
     left: 50%;
     transform: translateX(-50%);
-    width: 90%; /* Lebih lebar agar lebih seimbang */
+    width: 90%;
     background: rgba(139, 7, 7, 0.95);
     padding: 15px 0;
     text-align: center;
-    border-radius: 10px; /* Membuat tampilan lebih rapi */
+    border-radius: 10px;
     transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
     z-index: 1000;
   }
 
-  #navbar ul {
+  .navbar ul {
     flex-direction: column;
     gap: 15px;
     list-style: none;
@@ -362,15 +376,22 @@ p {
     margin: 0;
   }
 
-  #navbar ul li {
+  .navbar ul li {
     text-align: center;
   }
 
-  #navbar.mobile-nav-active {
+  .navbar.mobile-nav-active {
     visibility: visible;
     opacity: 1;
   }
+
+  /* Supaya hero section tetap proporsional di mobile */
+  .hero {
+    height: 80vh;
+    padding-top: 100px;
+  }
 }
+
 
 /*--------------------------------------------------------------
 # Get Started Section

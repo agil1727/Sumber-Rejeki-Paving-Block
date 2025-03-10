@@ -1629,45 +1629,96 @@ body {
 
 .contact-container {
   display: flex;
-  flex-wrap: nowrap; /* Mencegah elemen turun ke bawah */
-  gap: 20px;
-  max-width: 900px;
+  flex-wrap: nowrap;
+  gap: 30px;
+  max-width: 1100px; /* Diperbesar */
   margin: auto;
   align-items: center;
-  justify-content: space-between; /* Menjaga posisi kanan-kiri */
+  justify-content: space-between;
+  padding: 20px;
 }
 
 .contact-map {
   flex: 1;
-  min-width: 45%;
+  min-width: 50%;
 }
 
 .contact-map iframe {
   width: 100%;
-  height: 350px; /* Menyesuaikan tinggi agar proporsional */
-  border-radius: 8px;
+  height: 400px; /* Diperbesar */
+  border-radius: 12px;
   border: none;
 }
 
 .contact-form {
   flex: 1;
-  min-width: 45%;
-  padding: 20px;
-  border: 1px solid #ddd;
-  border-radius: 8px;
-  background-color: #fff;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  min-width: 50%;
+  padding: 25px;
+  border-radius: 12px;
+  background: linear-gradient(to bottom, #ff7f00, #ff4500); /* Gradasi oranye-merah */
+  color: white;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.2);
 }
 
-/* Responsif untuk layar kecil */
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 10px;
+  margin-top: 10px;
+  border: none;
+  border-radius: 5px;
+}
+
+.contact-form button {
+  background-color: #ff4500;
+  color: white;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+.contact-form button:hover {
+  background-color: #cc3700;
+}
+
+/* Styling untuk kolom alamat, Instagram, WhatsApp */
+.contact-info {
+  display: flex;
+  justify-content: space-around;
+  text-align: center;
+  background: linear-gradient(to bottom, #ff7f00, #ff4500); /* Gradasi */
+  color: white;
+  padding: 40px 20px; /* Tambah jarak atas & bawah */
+  border-radius: 10px;
+  margin-top: 30px;
+}
+
+.contact-info div {
+  flex: 1;
+}
+
+.contact-info h3 {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+/* Responsif */
 @media (max-width: 768px) {
   .contact-container {
-    flex-direction: column; /* Kembali ke atas-bawah jika layar kecil */
+    flex-direction: column;
   }
 
   .contact-map,
   .contact-form {
     min-width: 100%;
+  }
+
+  .contact-info {
+    flex-direction: column;
+    gap: 20px;
+    text-align: center;
   }
 }
 

@@ -332,7 +332,7 @@ p {
 
 /* Pastikan teks utama tetap terlihat */
 .hero h1 {
-  color: #ffffff !important;
+  color: #a10000 !important;
   font-size: 36px;
   font-weight: bold;
   text-align: center;

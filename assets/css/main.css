@@ -1627,6 +1627,61 @@ body {
 # Contact Section
 --------------------------------------------------------------*/
 
+.row.text-center.mb-4 {
+  margin-bottom: 2rem;
+}
+
+.p-3.shadow-sm {
+  padding: 1.5rem;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  background: #fff;
+  border-radius: 10px;
+}
+
+.p-3.shadow-sm i {
+  font-size: 2rem;
+}
+
+.p-3.shadow-sm h4 {
+  margin-top: 0.5rem;
+  font-size: 1.25rem;
+}
+
+.p-3.shadow-sm p {
+  margin-bottom: 0;
+}
+
+.row.align-items-center {
+  margin-top: 2rem;
+}
+
+.ratio.ratio-16x9 iframe {
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+  border: none;
+}
+
+.form-control {
+  padding: 0.75rem;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+}
+
+.btn-primary {
+  background-color: #FF5733;
+  border: none;
+  padding: 0.75rem;
+  border-radius: 8px;
+  font-size: 1rem;
+  transition: background 0.3s ease-in-out;
+}
+
+.btn-primary:hover {
+  background-color: #e04a29;
+}
+
+/* Container utama kontak */
 .contact-container-horizontal {
   display: flex;
   flex-wrap: wrap;
@@ -1637,6 +1692,7 @@ body {
   justify-content: space-between;
 }
 
+/* Google Maps */
 .contact-map {
   flex: 1;
   min-width: 45%;
@@ -1649,15 +1705,40 @@ body {
   border: none;
 }
 
+/* Formulir Kontak */
 .contact-form {
   flex: 1;
   min-width: 45%;
   padding: 20px;
-  border: 1px solid #ddd;
   border-radius: 8px;
   background-color: #fff;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
 }
 
+.contact-form input, .contact-form textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+  border: 1px solid #ddd;
+}
+
+.contact-form button {
+  width: 100%;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  background: linear-gradient(45deg, #FF5733, #FF8D1A);
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.contact-form button:hover {
+  background: linear-gradient(45deg, #E04E2A, #E07C18);
+}
+
+/* Informasi kontak */
 .info-container {
   display: flex;
   justify-content: center;
@@ -1676,13 +1757,13 @@ body {
 
 .info-item {
   flex: 1;
-  padding: 10px;
+  padding: 15px;
   border-radius: 8px;
   background: #fff;
   transition: transform 0.3s ease-in-out;
-  border: 1px solid #ccc;
   text-align: center;
   max-width: 200px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
 }
 
 .info-item:hover {
@@ -1698,32 +1779,39 @@ body {
 .info-item i {
   font-size: 24px;
   color: #ff8d1a;
+  transition: transform 0.3s ease-in-out;
 }
 
-.highlight {
-  background: linear-gradient(45deg, #FF5733, #FF8D1A);
-  background-clip: text; /* Tambahkan properti standar */
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+.info-item:hover i {
+  transform: scale(1.2);
 }
 
-
-/* Responsif untuk layar kecil */
 @media (max-width: 768px) {
+  .row.text-center .col-md-4 {
+      margin-bottom: 1rem;
+  }
+  .row.align-items-center {
+      flex-direction: column;
+  }
+  .col-md-6 {
+      width: 100%;
+      margin-bottom: 1.5rem;
+  }
   .contact-container-horizontal {
-    flex-direction: column;
+      flex-direction: column;
   }
   .contact-map, .contact-form {
-    min-width: 100%;
+      min-width: 100%;
   }
   .info-wrapper {
-    flex-direction: column;
-    align-items: center;
+      flex-direction: column;
+      align-items: center;
   }
   .info-item {
-    max-width: 100%;
+      max-width: 100%;
   }
 }
+
 /*--------------------------------------------------------------
 # Blog
 --------------------------------------------------------------*/

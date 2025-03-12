@@ -1639,6 +1639,7 @@ body {
   justify-content: center;
   align-items: center;
   gap: 20px;
+  flex-wrap: wrap; /* Menjaga kesejajaran di tampilan lebih kecil */
 }
 
 .info-item {
@@ -1649,6 +1650,7 @@ body {
   transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out; /* Transisi halus */
   text-align: center;
   max-width: 200px;
+  min-width: 150px;
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
 }
 
@@ -1769,6 +1771,7 @@ body {
       max-width: 100%;
   }
 }
+
 /*--------------------------------------------------------------
 # Blog
 --------------------------------------------------------------*/

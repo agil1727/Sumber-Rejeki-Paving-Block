@@ -1628,36 +1628,19 @@ body {
 --------------------------------------------------------------*/
 /* Tambahan CSS untuk Contact Page */
 
-/* Kontainer Utama */
-.row.text-center.mb-4 {
-  margin-bottom: 2rem;
-}
-
-.container {
-  max-width: 1100px;
-  margin: auto;
-}
-
-/* Kontainer Informasi */
-.info-container {
+/* Baris pertama: Informasi kontak */
+.contact-info {
   display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: center;
-  gap: 15px; /* Jarak antar elemen lebih rapat */
+  justify-content: space-between;
+  margin-bottom: 20px;
 }
 
-/* Item Informasi */
 .info-item {
-  flex: 1;
   text-align: center;
-  padding: 15px;
-  border-radius: 12px;
   background: #FFA500;
-  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
-  max-width: 230px; /* Ukuran tetap */
-  min-width: 180px;
-  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.15);
+  padding: 15px;
+  border-radius: 10px;
+  transition: transform 0.3s, box-shadow 0.3s;
 }
 
 .info-item:hover {
@@ -1665,134 +1648,57 @@ body {
   box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.2);
 }
 
-/* Ikon */
-.info-item i {
-  font-size: 2rem;
-  color: #ffffff;
-  margin-bottom: 10px;
-  transition: transform 0.3s ease-in-out;
-}
-
-.info-item:hover i {
-  transform: scale(1.1);
-}
-
-/* Judul */
-.info-item h3 {
-  font-size: 1.2rem;
-  color: #FFD700;
-  margin-bottom: 5px;
-}
-
-/* Teks dan Link */
-.info-item p {
-  font-size: 0.9rem;
-  margin: 0;
-}
-
 .info-item a {
-  color: white;
   text-decoration: none;
-  font-weight: bold;
+  color: white;
+  display: block;
 }
 
-.info-item a:hover {
-  text-decoration: underline;
+.icon-style {
+  font-size: 2.5rem;
+  color: white;
+  margin-bottom: 10px;
 }
 
-/* Kontainer Kontak */
-.contact-container-horizontal {
+/* Baris kedua: Google Maps dan Formulir */
+.contact-container {
   display: flex;
-  flex-wrap: wrap;
   gap: 20px;
-  max-width: 900px;
-  margin: auto;
-  align-items: center;
-  justify-content: space-between;
+  flex-wrap: wrap;
 }
 
-.row.align-items-center {
-  flex-direction: column;
-}
-
-/* Google Maps */
 .contact-map {
   flex: 1;
-  min-width: 45%;
+  min-width: 48%;
 }
 
 .contact-map iframe {
   width: 100%;
   height: 350px;
-  border-radius: 12px;
+  border-radius: 10px;
   border: none;
 }
 
-/* Formulir Kontak */
 .contact-form {
   flex: 1;
-  min-width: 45%;
+  min-width: 48%;
   padding: 20px;
-  border-radius: 12px;
-  background-color: #fff;
+  background: #fff;
+  border-radius: 10px;
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.15);
 }
 
-.contact-form input,
-.contact-form textarea {
-  width: 100%;
-  padding: 12px;
-  margin-bottom: 10px;
-  border-radius: 8px;
-  border: 1px solid #ddd;
-  transition: border-color 0.3s ease;
-}
-
-.contact-form input:focus,
-.contact-form textarea:focus {
-  border-color: #FF5733;
-  outline: none;
-}
-
-.contact-form button {
-  width: 100%;
-  padding: 12px;
-  border: none;
-  border-radius: 8px;
-  background: linear-gradient(45deg, #FF5733, #FF8D1A);
-  color: white;
-  font-size: 16px;
-  cursor: pointer;
-  transition: background 0.3s ease;
-}
-
-.contact-form button:hover {
-  background: linear-gradient(45deg, #E04E2A, #E07C18);
-}
-
-/* Responsivitas */
+/* Responsif */
 @media (max-width: 768px) {
-  .info-container {
-    flex-direction: column;
-    gap: 10px;
+  .contact-info {
+      flex-direction: column;
+      gap: 10px;
   }
-
-  .info-item {
-    max-width: 100%;
+  .contact-container {
+      flex-direction: column;
   }
-
-  .contact-container-horizontal {
-    flex-direction: column;
-  }
-
-  .contact-map,
-  .contact-form {
-    min-width: 100%;
-  }
-
-  .info-wrapper {
-    flex-direction: column;
-    align-items: center;
+  .contact-map, .contact-form {
+      min-width: 100%;
   }
 }
 

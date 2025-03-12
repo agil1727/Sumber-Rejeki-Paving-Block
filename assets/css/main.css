@@ -1626,62 +1626,51 @@ body {
 /*--------------------------------------------------------------
 # Contact Section
 --------------------------------------------------------------*/
+body {
+  background-color: yellow; /* Ubah latar belakang menjadi kuning */
+  color: red; /* Ubah warna teks menjadi merah */
+  font-size: 30px; /* Ubah ukuran font menjadi lebih besar */
+}
 
+/* Kontainer Utama */
 .row.text-center.mb-4 {
   margin-bottom: 2rem;
 }
 
-.p-3.shadow-sm {
-  padding: 1.5rem;
-  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+/* Info Item */
+.info-item {
+  flex: 1;
+  padding: 15px;
+  border-radius: 12px; /* Radius sudut yang lebih besar */
   background: #fff;
-  border-radius: 10px;
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out; /* Transisi halus */
+  text-align: center;
+  max-width: 200px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
 }
 
-.p-3.shadow-sm i {
-  font-size: 2rem;
+.info-item:hover {
+  transform: translateY(-5px); /* Efek angkat saat hover */
+  box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.2); /* Bayangan lebih dalam saat hover */
 }
 
-.p-3.shadow-sm h4 {
-  margin-top: 0.5rem;
-  font-size: 1.25rem;
+.info-item h3 {
+  color: #333; /* Warna teks yang lebih gelap untuk kontras */
+  font-size: 1.1rem; /* Ukuran font yang lebih besar */
+  margin-bottom: 5px;
 }
 
-.p-3.shadow-sm p {
-  margin-bottom: 0;
+.info-item i {
+  font-size: 2rem; /* Ukuran ikon yang lebih besar */
+  color: #FF8D1A; /* Warna ikon yang lebih cerah */
+  transition: transform 0.3s ease-in-out; /* Transisi untuk ikon */
 }
 
-.row.align-items-center {
-  margin-top: 2rem;
+.info-item:hover i {
+  transform: scale(1.1); /* Efek zoom pada ikon saat hover */
 }
 
-.ratio.ratio-16x9 iframe {
-  width: 100%;
-  height: 100%;
-  border-radius: 10px;
-  border: none;
-}
-
-.form-control {
-  padding: 0.75rem;
-  border-radius: 8px;
-  border: 1px solid #ccc;
-}
-
-.btn-primary {
-  background-color: #FF5733;
-  border: none;
-  padding: 0.75rem;
-  border-radius: 8px;
-  font-size: 1rem;
-  transition: background 0.3s ease-in-out;
-}
-
-.btn-primary:hover {
-  background-color: #e04a29;
-}
-
-/* Container utama kontak */
+/* Kontainer Kontak */
 .contact-container-horizontal {
   display: flex;
   flex-wrap: wrap;
@@ -1690,6 +1679,10 @@ body {
   margin: auto;
   align-items: center;
   justify-content: space-between;
+}
+
+.row.align-items-center {
+  flex-direction: column;
 }
 
 /* Google Maps */
@@ -1701,7 +1694,7 @@ body {
 .contact-map iframe {
   width: 100%;
   height: 350px;
-  border-radius: 8px;
+  border-radius: 12px; /* Radius sudut yang lebih besar */
   border: none;
 }
 
@@ -1710,82 +1703,44 @@ body {
   flex: 1;
   min-width: 45%;
   padding: 20px;
-  border-radius: 8px;
+  border-radius: 12px; /* Radius sudut yang lebih besar */
   background-color: #fff;
-  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.15);
 }
 
-.contact-form input, .contact-form textarea {
+.contact-form input,
+.contact-form textarea {
   width: 100%;
-  padding: 10px;
+  padding: 12px; /* Padding yang lebih besar untuk kenyamanan */
   margin-bottom: 10px;
-  border-radius: 5px;
+  border-radius: 8px; /* Radius sudut yang lebih besar */
   border: 1px solid #ddd;
+  transition: border-color 0.3s ease; /* Transisi border */
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  border-color: #FF5733; /* Warna border saat fokus */
+  outline: none; /* Menghilangkan outline default */
 }
 
 .contact-form button {
   width: 100%;
-  padding: 10px;
+  padding: 12px;
   border: none;
-  border-radius: 5px;
+  border-radius: 8px; /* Radius sudut yang lebih besar */
   background: linear-gradient(45deg, #FF5733, #FF8D1A);
   color: white;
   font-size: 16px;
   cursor: pointer;
+  transition: background 0.3s ease; /* Transisi latar belakang */
 }
 
 .contact-form button:hover {
   background: linear-gradient(45deg, #E04E2A, #E07C18);
 }
 
-/* Informasi kontak */
-.info-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-top: 30px;
-  text-align: center;
-}
-
-.info-wrapper {
-  display: flex;
-  gap: 15px;
-  justify-content: space-between;
-  width: 100%;
-  max-width: 900px;
-}
-
-.info-item {
-  flex: 1;
-  padding: 15px;
-  border-radius: 8px;
-  background: #fff;
-  transition: transform 0.3s ease-in-out;
-  text-align: center;
-  max-width: 200px;
-  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
-}
-
-.info-item:hover {
-  transform: scale(1.05);
-}
-
-.info-item h3 {
-  color: black;
-  font-size: 16px;
-  margin-bottom: 5px;
-}
-
-.info-item i {
-  font-size: 24px;
-  color: #ff8d1a;
-  transition: transform 0.3s ease-in-out;
-}
-
-.info-item:hover i {
-  transform: scale(1.2);
-}
-
+/* Responsivitas */
 @media (max-width: 768px) {
   .row.text-center .col-md-4 {
       margin-bottom: 1rem;
@@ -1811,7 +1766,6 @@ body {
       max-width: 100%;
   }
 }
-
 /*--------------------------------------------------------------
 # Blog
 --------------------------------------------------------------*/

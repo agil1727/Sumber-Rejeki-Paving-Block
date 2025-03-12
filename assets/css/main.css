@@ -1676,10 +1676,11 @@ body {
 
 .contact-map iframe {
   width: 100%;
-  height: 350px;
-  border-radius: 10px;
-  border: none;
+  height: 400px;
+  display: block;
+  background: #ddd; /* Warna latar belakang untuk melihat area iframe */
 }
+
 
 .contact-form {
   flex: 1;

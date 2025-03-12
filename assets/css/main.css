@@ -314,7 +314,7 @@ p {
 
 /* ====== Hero Section Styling ====== */
 /* ===== Hero Section ===== */
-.hero {
+..hero {
   background-image: url('assets/img/hero-carousel/1.jpeg');
   background-size: cover;
   background-position: center;
@@ -329,7 +329,7 @@ p {
   flex-direction: column;
   text-align: center;
   color: #ffffff;
-  padding-top: 80px; /* Supaya tidak ketutupan navbar */
+  padding-top: 80px;
 }
 
 /* ===== Hero Title Styling ===== */
@@ -337,14 +337,14 @@ p {
   font-size: 2.5rem;
   font-weight: bold;
   text-align: center;
-  color: white; /* Warna teks "Selamat Datang" */
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Bayangan teks */
+  color: white;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
 
 /* Warna teks khusus untuk "Di Sumber Rejeki Paving Block" */
 .hero-title span {
   color: red;
-  text-shadow: 3px 3px 6px rgba(255, 0, 0, 0.5); /* Bayangan merah */
+  text-shadow: 3px 3px 6px rgba(255, 0, 0, 0.5);
 }
 
 /* Responsive Design */
@@ -353,7 +353,6 @@ p {
     font-size: 2rem;
   }
 }
-
 
 /* Teks utama */
 .hero h1 {
@@ -366,7 +365,7 @@ p {
 
 /* ===== Tombol MULAI ===== */
 .btn-start {
-  background: linear-gradient(45deg, #ff6f00, #ff9f00, #ffc107); /* Gradasi warna oranye */
+  background: linear-gradient(45deg, #ff6f00, #ff9f00, #ffc107);
   color: #ffffff;
   font-size: 18px;
   padding: 12px 24px;
@@ -392,8 +391,60 @@ p {
   transform: scale(0.95);
 }
 
-/* ====== Responsive Design ====== */
+/* ====== Hamburger Icon (Mobile) ====== */
+.mobile-nav-toggle {
+  display: none;
+  font-size: 32px;
+  cursor: pointer;
+  color: #ffffff;
+  background: none;
+  border: none;
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  z-index: 1001;
+  padding: 10px;
+}
+
+/* ====== Navbar Responsive (Mobile) ====== */
 @media (max-width: 768px) {
+  .mobile-nav-toggle {
+    display: block;
+  }
+
+  .navbar {
+    visibility: hidden;
+    opacity: 0;
+    position: fixed;
+    top: 60px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 90%;
+    background: rgba(139, 7, 7, 0.95);
+    padding: 15px 0;
+    text-align: center;
+    border-radius: 10px;
+    transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
+    z-index: 1000;
+  }
+
+  .navbar ul {
+    flex-direction: column;
+    gap: 15px;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  .navbar ul li {
+    text-align: center;
+  }
+
+  .navbar.mobile-nav-active {
+    visibility: visible;
+    opacity: 1;
+  }
+
   .hero {
     height: 80vh;
     padding-top: 100px;
@@ -408,7 +459,6 @@ p {
     padding: 10px 20px;
   }
 }
-
 /*--------------------------------------------------------------
 # Get Started Section
 --------------------------------------------------------------*/

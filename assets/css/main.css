@@ -1627,59 +1627,148 @@ body {
 # Contact Section
 --------------------------------------------------------------*/
 /* Tambahan CSS untuk Contact Page */
+
+/* Kontainer Utama */
+.row.text-center.mb-4 {
+  margin-bottom: 2rem;
+}
+
 .info-container {
   display: flex;
-  flex-direction: column;
+  flex-direction: row; /* Sejajar secara horizontal */
+  justify-content: center;
   align-items: center;
   gap: 20px;
 }
 
 .info-item {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  width: 250px; /* Lebar kotak */
-  height: 120px; /* Tinggi kotak */
-  border-radius: 10px;
-  background-color: #fff;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  text-align: center;
+  flex: 1;
   padding: 15px;
-  transition: transform 0.3s ease-in-out;
+  border-radius: 12px; /* Radius sudut yang lebih besar */
+  background: #FFA500; /* Warna orange */
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out; /* Transisi halus */
+  text-align: center;
+  max-width: 200px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
 }
 
 .info-item:hover {
-  transform: scale(1.05);
+  transform: translateY(-5px); /* Efek angkat saat hover */
+  box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.2); /* Bayangan lebih dalam saat hover */
 }
 
-.info-item a {
-  text-decoration: none;
-  color: inherit;
+.info-item h3 {
+  color: #FFD700; /* Warna kuning */
+  font-size: 1.1rem; /* Ukuran font yang lebih besar */
+  margin-bottom: 5px;
 }
 
 .info-item i {
-  font-size: 24px;
-  margin-bottom: 8px;
-  color: #007bff;
+  font-size: 2rem; /* Ukuran ikon yang lebih besar */
+  color: #FF0000; /* Warna merah */
+  transition: transform 0.3s ease-in-out; /* Transisi untuk ikon */
 }
 
-/* Kontainer Utama */
-.row.text-center.mb-4 {
-margin-bottom: 2rem;
+.info-item:hover i {
+  transform: scale(1.1); /* Efek zoom pada ikon saat hover */
+}
+
+/* Kontainer Kontak */
+.contact-container-horizontal {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  max-width: 900px;
+  margin: auto;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.row.align-items-center {
+  flex-direction: column;
+}
+
+/* Google Maps */
+.contact-map {
+  flex: 1;
+  min-width: 45%;
+}
+
+.contact-map iframe {
+  width: 100%;
+  height: 350px;
+  border-radius: 12px; /* Radius sudut yang lebih besar */
+  border: none;
+}
+
+/* Formulir Kontak */
+.contact-form {
+  flex: 1;
+  min-width: 45%;
+  padding: 20px;
+  border-radius: 12px; /* Radius sudut yang lebih besar */
+  background-color: #fff;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 12px; /* Padding yang lebih besar untuk kenyamanan */
+  margin-bottom: 10px;
+  border-radius: 8px; /* Radius sudut yang lebih besar */
+  border: 1px solid #ddd;
+  transition: border-color 0.3s ease; /* Transisi border */
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  border-color: #FF5733; /* Warna border saat fokus */
+  outline: none; /* Menghilangkan outline default */
+}
+
+.contact-form button {
+  width: 100%;
+  padding: 12px;
+  border: none;
+  border-radius: 8px; /* Radius sudut yang lebih besar */
+  background: linear-gradient(45deg, #FF5733, #FF8D1A);
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background 0.3s ease; /* Transisi latar belakang */
+}
+
+.contact-form button:hover {
+  background: linear-gradient(45deg, #E04E2A, #E07C18);
 }
 
 /* Responsivitas */
 @media (max-width: 768px) {
-.info-container {
-    flex-direction: column;
-    align-items: center;
-}
-.info-item {
-    max-width: 100%;
-}
-}
-/*--------------------------------------------------------------
+  .row.text-center .col-md-4 {
+      margin-bottom: 1rem;
+  }
+  .row.align-items-center {
+      flex-direction: column;
+  }
+  .col-md-6 {
+      width: 100%;
+      margin-bottom: 1.5rem;
+  }
+  .contact-container-horizontal {
+      flex-direction: column;
+  }
+  .contact-map, .contact-form {
+      min-width: 100%;
+  }
+  .info-wrapper {
+      flex-direction: column;
+      align-items: center;
+  }
+  .info-item {
+      max-width: 100%;
+  }
+}/*--------------------------------------------------------------
 # Blog
 --------------------------------------------------------------*/
 .blog .blog-pagination {

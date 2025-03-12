@@ -1633,11 +1633,13 @@ body {
   display: flex;
   justify-content: space-between;
   margin-bottom: 20px;
+  margin-top: 30px; /* Tambahkan jarak atas */
 }
+
 
 .info-item {
   text-align: center;
-  background: #FFA500;
+  background: linear-gradient(135deg, #FF6347, #FFA500, #FFD700); /* Gradasi merah, oranye, kuning */
   padding: 15px;
   border-radius: 10px;
   transition: transform 0.3s, box-shadow 0.3s;

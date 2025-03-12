@@ -1626,12 +1626,6 @@ body {
 /*--------------------------------------------------------------
 # Contact Section
 --------------------------------------------------------------*/
-body {
-  background-color: yellow; /* Ubah latar belakang menjadi kuning */
-  color: red; /* Ubah warna teks menjadi merah */
-  font-size: 30px; /* Ubah ukuran font menjadi lebih besar */
-}
-
 /* Kontainer Utama */
 .row.text-center.mb-4 {
   margin-bottom: 2rem;

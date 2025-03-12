@@ -400,7 +400,7 @@ p {
   background: none;
   border: none;
   position: absolute;
-  top: 5px; /* Digeser lebih ke atas */
+  top: 0px; /* Digeser lebih ke atas */
   right: 20px;
   z-index: 1001;
   padding: 10px;

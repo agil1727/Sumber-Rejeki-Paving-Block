@@ -314,7 +314,7 @@ p {
 
 /* ====== Hero Section Styling ====== */
 /* ===== Hero Section ===== */
-..hero {
+.hero {
   background-image: url('assets/img/hero-carousel/1.jpeg');
   background-size: cover;
   background-position: center;

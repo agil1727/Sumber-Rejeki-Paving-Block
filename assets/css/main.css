@@ -1690,6 +1690,36 @@ body {
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.15);
 }
 
+/* Tombol Kirim */
+.btn-submit {
+  background: linear-gradient(45deg, #FF5733, #FFA500, #FFD700); /* Gradasi merah, oranye, kuning */
+  border: none;
+  color: white;
+  font-size: 16px;
+  font-weight: bold;
+  padding: 12px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  display: block;
+  width: 100%;
+  text-align: center;
+}
+
+/* Efek hover */
+.btn-submit:hover {
+  background: linear-gradient(45deg, #E63900, #FF7F00, #FFC300); /* Warna lebih gelap saat hover */
+  transform: translateY(-3px);
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Efek saat tombol ditekan */
+.btn-submit:active {
+  transform: translateY(0);
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+
 /* Responsif */
 @media (max-width: 768px) {
   .contact-info {
